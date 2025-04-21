@@ -7,7 +7,6 @@ type User = {
   email: string
 }
 interface AuthContextType {
-  roles: string[]
   permissions: string[]
   user: User | null
   hasPermission: (permission: string) => boolean
@@ -16,7 +15,6 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [roles, setRoles] = useState<string[]>([])
   const [permissions, setPermissions] = useState<string[]>([])
   const [user, setUser] = useState<User>({ id: 0, email: '' })
 
@@ -24,11 +22,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const fetchPermissions = async () => {
       try {
         const resp = await fetch(`http://localhost:8302/api/permissions`)
-        const respRoles = await fetch(`http://localhost:8302/api/groups`)
         const data = await resp.json()
-        const dataRoles = await respRoles.json()
 
-        setRoles(dataRoles)
         setPermissions(data.map((perm: { id: number; name: string }) => perm.name))
       } catch (error) {
         console.error('Failed to fetch permissions', error)
@@ -55,7 +50,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const hasPermission = (permission: string) => permissions.includes(permission)
 
   return (
-    <AuthContext.Provider value={{ roles, permissions, user, hasPermission }}>
+    <AuthContext.Provider value={{ permissions, user, hasPermission }}>
       {children}
     </AuthContext.Provider>
   )

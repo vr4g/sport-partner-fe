@@ -34,3 +34,9 @@ export const emailReggex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 export const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_BASE_URL
 
 export const LOCALSTORAGE_TOKEN_KEY = 'sa-token'
+
+export const GENDER_OPTIONS = [
+  { label: 'Male', value: 'm' },
+  { label: 'Female', value: 'f' },
+  { label: 'Other', value: 'o' },
+]

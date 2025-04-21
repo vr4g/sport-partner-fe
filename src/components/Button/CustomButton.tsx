@@ -5,7 +5,7 @@ interface Props {
   size?: string
   title: string
   onClick: MouseEventHandler<HTMLButtonElement>
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'outlined'
 }
 
 const CustomButton: React.FC<Props> = ({

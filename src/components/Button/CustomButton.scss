@@ -5,15 +5,27 @@
   transition: 400ms all;
   height: fit-content;
   font-size: 16px;
+  height: 40px;
+  font-weight: 600;
 
   &.primary {
     background-color: var(--primary-blue);
     color: var(--background-secondary);
   }
 
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+  }
+
   &:hover {
     background-color: var(--primary-blue-hover);
     transition: 400ms all;
+  }
+  &.outlined:hover {
+    border: 1px solid var(--primary-blue-hover);
+    color: var(--border-light);
   }
 
   &.button-small {
