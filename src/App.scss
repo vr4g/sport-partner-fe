@@ -1,0 +1,11 @@
+.app-body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+}

@@ -1,0 +1,16 @@
+.headerContainer {
+  background-color: var(--header-background);
+  width: 100%;
+  color: white;
+
+  .padding {
+    padding: 48px;
+  }
+
+  & h1 {
+    margin: 0;
+  }
+  &.btnStyle {
+    background-color: aquamarine !important ;
+  }
+}

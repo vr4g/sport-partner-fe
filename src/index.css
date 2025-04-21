@@ -1,0 +1,34 @@
+@import './styles/colors.scss';
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* Light Theme */
+  --header-background: var(--header-light);
+  --primary-blue: var(--primary-blue-light);
+  --primary-blue-hover: var(--primary-blue-hover-light);
+  --background-main: var(--background-main-light);
+  --background-secondary: var(--background-secondary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --border-color: var(--border-light);
+  --success-color: var(--success-light);
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --header-background: var(--header-dark);
+  --primary-blue: var(--primary-blue-dark);
+  --primary-blue-hover: var(--primary-blue-hover-dark);
+  --background-main: var(--background-main-dark);
+  --background-secondary: var(--background-secondary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --border-color: var(--border-dark);
+  --success-color: var(--success-dark);
+}

@@ -1,0 +1,30 @@
+.switch {
+  width: 2.3125rem;
+  height: 0.9rem;
+  border-radius: 25px;
+  border: 1px solid black;
+  display: flex;
+  padding: 0.2rem 0.2rem;
+  align-items: center;
+  justify-content: flex-start;
+
+  transition: 400ms;
+}
+.switch-active {
+  transition: 400ms;
+}
+
+.switch-dot {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 1rem;
+  background-color: black;
+  transform: translateX(0);
+  transition: 400ms;
+}
+
+.switch-dot-active {
+  background-color: var(--background-color);
+  transform: translateX(20px);
+  transition: 400ms;
+}

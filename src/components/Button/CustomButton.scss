@@ -1,0 +1,30 @@
+.button-container {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 400ms all;
+  height: fit-content;
+  font-size: 16px;
+
+  &.primary {
+    background-color: var(--primary-blue);
+    color: var(--background-secondary);
+  }
+
+  &:hover {
+    background-color: var(--primary-blue-hover);
+    transition: 400ms all;
+  }
+
+  &.button-small {
+    padding: 0.2rem 0.5rem;
+  }
+
+  &.button-normal {
+    padding: 0.5rem 1rem;
+  }
+
+  &.button-large {
+    padding: 0.8rem 1.3rem;
+  }
+}

@@ -1,0 +1,11 @@
+build
+coverage
+dist
+
+# Generated
+src/__generated__
+src/icons
+src/*.json
+keys.json
+schema.graphql
+stats.json
